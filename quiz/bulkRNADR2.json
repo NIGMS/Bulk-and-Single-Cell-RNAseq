@@ -1,0 +1,54 @@
+[
+    {
+        "question": "Select a single answer. What is the Ensembl Gene ID for the most highly expressed gene across the samples?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "ENSDARG00000007576",
+                "correct": false,
+                "feedback": "False. This was the least expressed gene among the top 10 in the SRR3371417 sample."
+            },
+            {
+                "answer": "ENSDARG00000092553",
+                "correct": true,
+                "feedback": "True. ENSDARG00000092553 was the most highly expressed gene among all samples."
+            },
+            {
+                "answer": "ENSDARG00000036316",
+                "correct": false,
+                "feedback": "Almost. ENSDARG00000036316 was highly expressed in all samples, but not the most highly expressed one."
+            },
+            {
+                "answer": "ENSDARG00000015653",
+                "correct": false,
+                "feedback": "False. This gene was not listed in any of the top 10 gene lists."
+            }
+        ]
+    },
+    {
+        "question": "Select a single answer. How many reads did that gene have in the sample SRR21972723?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "121331.73",
+                "correct": true,
+                "feedback": "True. The ENSDARG00000092553 gene has 121,331.73 reads in the SRR3371419 sample."
+            },
+            {
+                "answer": "124247.07",
+                "correct": false,
+                "feedback": "Incorrect. This is the number of reads for ENSDARG00000092553 in the SRR3371417 sample."
+            },
+            {
+                "answer": "118843.46",
+                "correct": false,
+                "feedback": "Incorrect. This is the number of reads for ENSDARG00000092553 in the SRR3371418 sample."
+            },
+            {
+                "answer": "211331.73",
+                "correct": false,
+                "feedback": "Incorrect. This is not the correct number of reads for the ENSDARG00000092553 gene in the SRR3371419 sample."
+            }
+        ]
+    }
+]

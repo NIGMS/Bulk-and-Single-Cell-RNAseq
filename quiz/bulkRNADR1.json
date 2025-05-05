@@ -1,0 +1,54 @@
+[
+    {
+        "question": "Select a single answer. How many reads passed trimming for the sample, SRR3371417?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "1,000,000,000",
+                "correct": false,
+                "feedback": "False"
+            },
+            {
+                "answer": "100,000",
+                "correct": false,
+                "feedback": "False"
+            },
+            {
+                "answer": "1,000,000",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "10,000",
+                "correct": false,
+                "feedback": "False"
+            }
+        ]
+    },
+    {
+        "question": "Select a single answer. For the most over-represented trimmed sequence for sample, SRR3371417, how many times does it appear in the trimmed reads?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "2,088",
+                "correct": false,
+                "feedback": "Incorrect. This is the top over-represented sequence across all samples in the MultiQC report."
+            },
+            {
+                "answer": "1,082",
+                "correct": false,
+                "feedback": "Incorrect. This is the top over-represented sequence in the reverse SRR3371422 sample."
+            },
+            {
+                "answer": "None",
+                "correct": true,
+                "feedback": "Correct. None of the reads in this sequence were over-represented."
+            },
+            {
+                "answer": "1,000,000",
+                "correct": false,
+                "feedback": "Incorrect. This is the total number of reads in the SRR3371417 sample."
+            }
+        ]
+    }
+]
