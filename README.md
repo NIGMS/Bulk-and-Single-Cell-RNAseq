@@ -26,7 +26,7 @@ The purpose of these tutorials is to help users familiarize themselves with RNA 
     - Sequence read preprocessing and mapping to generate read counts for microRNAs using [STAR](https://github.com/alexdobin/STAR) and [miRGeneDB](https://mirgenedb.org) annotation.
     - Analysis of read counts to generate lists of differentially expressed microRNAs using [R/DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html).
 - **scRNA-Seq:** 
-    - Analysis of read counts per cell using [R/seurat](https://satijalab.org/seurat) (for mouse and zebrafish).
+    - Analysis of read counts per cell using [R/seurat](https://satijalab.org/seurat) (mouse only).
 
 Here is a link to a [YouTube video](https://youtube.com) that gives you an overview of the tutorials.
 
@@ -55,7 +55,7 @@ These set of workflows covering data analysis of mouse studies are broken down i
    
   - [Tutorial 1 Mouse Subset Data](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Mouse/Tutorial_1_alignment_mouse.ipynb): This workflow uses a subset of reads with RSEM to generate read counts, and includes steps for data retrieval, read trimming, quality control, read mapping, and counting mapped reads. Data are copied from an AWS S3 bucket, and processed using Jupyter notebooks on SageMaker.
 
-   - [Tutorial 1b Mouse Full Data](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Mouse/Tutorial_1_alignment_full_dataset_mouse.ipynb): This workflow uses the full dataset with RSEM to generate read counts, and includes steps for data retrieval, read trimming, quality control, read mapping, and counting mapped reads. Data are downloaded from the Sequence Read Archive, and processed using Jupyter notebooks on SageMaker.
+   - [Tutorial 1B Mouse Full Data](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Mouse/Tutorial_1B_alignment_full_dataset_mouse.ipynb): This workflow uses the full dataset with RSEM to generate read counts, and includes steps for data retrieval, read trimming, quality control, read mapping, and counting mapped reads. Data are downloaded from the Sequence Read Archive, and processed using Jupyter notebooks on SageMaker.
 
    - [Tutorial 2 Mouse DEG](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Mouse/Tutorial_2_DEG_mouse.ipynb): This workflow starts with read count data and uses R/DESeq2 to generate a list of differentially expressed genes. Data are copied from an AWS S3 bucket, and processed using R-based workflows.
      
@@ -74,15 +74,12 @@ These set of workflows covering data analysis of zebrafish studies are broken do
 ####  - **Bulk RNA-Sequencing**
   - [Tutorial 1 Zebrafish Subset Data](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Zebrafish/Tutorial_1_alignment_zebrafish.ipynb): This workflow uses a subset of reads with RSEM to generate read counts, and includes steps for data retrieval, read trimming, quality control, read mapping, and counting mapped reads. Data are copied from an AWS S3 bucket, and processed using Jupyter notebooks on SageMaker.
 
-   - [Tutorial 1b Zebrafish Full Data](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Zebrafish/Tutorial_1_alignment_full_dataset_zebrafish.ipynb): This workflow uses the full dataset with RSEM to generate read counts, and includes steps for data retrieval, read trimming, quality control, read mapping, and counting mapped reads. Data are downloaded from the Sequence Read Archive, and processed using Jupyter notebooks on SageMaker.
+   - [Tutorial 1B Zebrafish Full Data](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Zebrafish/Tutorial_1B_alignment_full_dataset_zebrafish.ipynb): This workflow uses the full dataset with RSEM to generate read counts, and includes steps for data retrieval, read trimming, quality control, read mapping, and counting mapped reads. Data are downloaded from the Sequence Read Archive, and processed using Jupyter notebooks on SageMaker.
 
    - [Tutorial 2 Zebrafish DEG](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Mouse/Tutorial_2_DEG_zebrafish.ipynb): This workflow starts with read count data and uses R/DESeq2 to generate a list of differentially expressed genes. Data are copied from an AWS S3 bucket, and processed using R-based workflows.
 
 ####  - **Small RNA-Sequencing**
    - [Tutorial 3 Zebrafish](Small_RNA-Seq_Tutorials/Small_RNA-Seq_Zebrafish/Tutorial_3_miRNA_zebrafish.ipynb): This workflow starts with read count data, and uses miRGeneDB annotation and R/DESeq2 for read mapping and expression analysis. Data are copied from an AWS S3 bucket, and processed using R-based workflows.
-
-####  - **Single Cell RNA-Sequencing**
-   - [Tutorial 4 Zebrafish](Single_Cell_RNA-Seq_Tutorials/Single_Cell_RNA-Seq_Zebrafish/Tutorial_4_scRNA-Seq_zebrafish.ipynb): This workflow starts with read count data, and uses R/seurat for data analysis. Data are copied from an AWS S3 bucket, and processed using R-based workflows.
 
 ### *C. elegans*
 
@@ -91,7 +88,7 @@ These set of workflows covering data analysis of *C. elegans* studies are broken
 ####  - **Bulk RNA-Sequencing**
   - [Tutorial 1 *C. elegans* Subset Data](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_C_elegans/Tutorial_1_alignment_c_elegans.ipynb): This workflow uses a subset of reads with RSEM to generate read counts, and includes steps for data retrieval, read trimming, quality control, read mapping, and counting mapped reads. Data are copied from an AWS S3 bucket, and processed using Jupyter notebooks on SageMaker.
 
-   - [Tutorial 1b *C. elegans* Full Data](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_C_elegans/Tutorial_1_alignment_full_dataset_c_elegans.ipynb): This workflow uses the full dataset with RSEM to generate read counts, and includes steps for data retrieval, read trimming, quality control, read mapping, and counting mapped reads. Data are downloaded from the Sequence Read Archive, and processed using Jupyter notebooks on SageMaker.
+   - [Tutorial 1B *C. elegans* Full Data](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_C_elegans/Tutorial_1B_alignment_full_dataset_c_elegans.ipynb): This workflow uses the full dataset with RSEM to generate read counts, and includes steps for data retrieval, read trimming, quality control, read mapping, and counting mapped reads. Data are downloaded from the Sequence Read Archive, and processed using Jupyter notebooks on SageMaker.
 
    - [Tutorial 2 *C. elegans* DEG](Bulk_RNA-Seq_C_elegans/Tutorial_2_DEG_c_elegans.ipynb): This workflow starts with read count data and uses R/DESeq2 to generate a list of differentially expressed genes. Data are copied from an AWS S3 bucket, and processed using R-based workflows.
 
@@ -103,45 +100,45 @@ These set of workflows covering data analysis of *C. elegans* studies are broken
 These tutorials use example sequence data from the Sequence Read Archive.
 - **Mouse Bulk RNA-Seq** [Tutorials [1](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Mouse/Tutorial_1_alignment_mouse.ipynb), [1b](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Mouse/Tutorial_1_alignment_full_dataset_mouse.ipynb), [2](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Mouse/Tutorial_2_DEG_mouse.ipynb), and [2b](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Mouse/Tutorial_2B_NetAct_mouse.ipynb) Mouse] - Study of how proteins from extracellular fluids from muscle (myokines) and fat tissues (adipokines) can signal between tissues. In this study, the authors examined the impact of the candidate adipokine, prosaposin (*Psad*), on gene expression in primary inguinal white adipose (iWAT) adipocytes. The study included primary iWAT transduced with a PSAP-adenovirus or a GFP-adenovirus control.
     - Gene Expression Omnibus: [GSE216094](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216094)
-    - Publication: Mittenbühler MJ, Jedrychowski MP, Van Vranken JG, Sprenger HG, Wilensky S, Dumesic PA, Sun Y, Tartaglia A, Bogoslavski D, A M, Xiao H, Blackmore KA, Reddy A, Gygi SP, Chouchani ET, Spiegelman BM. Isolation of extracellular fluids reveals novel secreted bioactive proteins from muscle and fat tissues. *Cell Metab.* 2023;35(3):535-549.e7. [PMID: 36681077](https://pubmed.ncbi.nlm.nih.gov/36681077/). 
+    - Publication: [Mittenbühler et al. (2023)](https://pubmed.ncbi.nlm.nih.gov/36681077/)
 - **Mouse Small RNA-Seq** [[Tutorial 3 Mouse](Small_RNA-Seq_Tutorials/Small_RNA-Seq_Mouse/Tutorial_3_miRNA_mouse.ipynb)] - Study of skeletal muscle fibrosis by profiling microRNA expression in cultured C2C12 myoblast cells treated with TGFB.
     - Gene Expression Omnibus: [GSE274814](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE274814)
 - **Mouse Single Cell RNA-Seq** [[Tutorial 4 Mouse](Single_Cell_RNA-Seq_Tutorials/Single_Cell_RNA-Seq_Mouse/Tutorial_4_scRNA-Seq_mouse.ipynb)] - Study of gene expression in single ventricular zone cells in the ganglionic eminences of the mouse forebrain.
     - Gene Expression Omnibus: [GSE167013](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE167013)
-    - Publication: Lee DR, Rhodes C, Mitra A, Zhang Y, Maric D, Dale RK, Petros TJ. Transcriptional heterogeneity of ventricular zone cells in the ganglionic eminences of the mouse forebrain. *Elife.* 2022;11:e71864. [PMID: 35175194](https://pubmed.ncbi.nlm.nih.gov/35175194/); PMCID: PMC8887903.
-<br>
+    - Publication: [Lee et al. (2022)](https://pubmed.ncbi.nlm.nih.gov/35175194/)
 <br>
 
 - **Zebrafish Bulk RNA-Seq** [Tutorial [1](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Zebrafish/Tutorial_1_alignment_zebrafish.ipynb), [1b](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Zebrafish/Tutorial_1_alignment_full_dataset_zebrafish.ipynb) and [2](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_Mouse/Tutorial_2_DEG_zebrafish.ipynb) Zebrafish] - Study of chronic exposure to cortisol in zebrafish to study glucocorticoid-induced developmental programming.
     - Gene Expression Omnibus: [GSE80221](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE80221)
-    - Publication: Hartig EI, Zhu S, King BL, Coffman JA. Cortisol-treated zebrafish embryos develop into pro-inflammatory adults with aberrant immune gene regulation. Biol Open. 2016;5(8):1134-41. [PMID: 27444789](https://pubmed.ncbi.nlm.nih.gov/27444789/); PMCID: PMC5004618.
+    - Publication: [Hartig et al. (2016)](https://pubmed.ncbi.nlm.nih.gov/27444789/)
 - **Zebrafish Small RNA-Seq** [[Tutorial 3 Zebrafish](Small_RNA-Seq_Tutorials/Small_RNA-Seq_Zebrafish/Tutorial_3_miRNA_zebrafish.ipynb)] - Study of zebrafish cardiac regeneration where the expression of microRNAs at 3 days post ventricular resection are compared to 0 day controls.
     - Gene Expression Omnibus: [GSE106884](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE106884) - Just the 6 of the 18 small RNA-Seq samples.
-    - Publication: King BL, Rosenstein MC, Smith AM, Dykeman CA, Smith GA, Yin VP. RegenDbase: a comparative database of noncoding RNA regulation of tissue regeneration circuits across multiple taxa. *NPJ Regen Med.* 2018;3:10. [PMID: 29872545](https://pubmed.ncbi.nlm.nih.gov/29872545/); PMCID: PMC5973935.
+    - Publication: [King et al. (2018)](https://pubmed.ncbi.nlm.nih.gov/29872545/)
 - **Zebrafish Single Cell RNA-Seq** [[Tutorial_4_Zebrafish](Single_Cell_RNA-Seq_Tutorials/Single_Cell_RNA-Seq_Zebrafish/Tutorial_4_scRNA-Seq_zebrafish.ipynb)] - Study on the function of cohensin complex in erythropoiesis and graulopoiesis by characterizing gene expression in kidney marrow cells in wild-type and *rad21* mutant zebrafish.
     - Gene Expression Omnibus: [GSE275537](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE275537)
-    - Publication: Gimenez G, Kalev-Zylinska ML, Morison I, Bohlander SK, Horsfield JA, Antony J. Cohesin *rad21* mutation dysregulates erythropoiesis and granulopoiesis output within the whole kidney marrow of adult zebrafish. *Am J Physiol Cell Physiol.* 2025;328(1):C9-C19. [PMID: 39548947](https://pubmed.ncbi.nlm.nih.gov/39548947/). 
-<br>
+    - Publication: [Gimenez et al. (2025)](https://pubmed.ncbi.nlm.nih.gov/39548947/)
 <br>
 
 - **C. elegans Bulk RNA-Seq** [Tutorial [1](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_C_elegans/Tutorial_1_alignment_c_elegans.ipynb), [1b](Bulk_RNA-Seq_Tutorials/Bulk_RNA-Seq_C_elegans/Tutorial_1_alignment_full_dataset_c_elegans.ipynb) and [2](Bulk_RNA-Seq_C_elegans/Tutorial_2_DEG_c_elegans.ipynb)] *C. elegans*] - Study of somatic reprogramming during germline development in *C. elegans* *glh-1* mutants and wild-type controls using gene expression (total mRNA transcriptome) and polysome profiling (translatome) from the Updike Lab at MDI Biological Laboratory.
     - Gene Expression Omnibus: [GSE148737](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE148737)
-    - Publication: Rochester JD, Min H, Gajjar GA, Sharp CS, Maki NJ, Rollins JA, Keiper BD, Graber JH, Updike DL. GLH-1/Vasa represses neuropeptide expression and drives spermiogenesis in the *C. elegans* germline. *Dev Biol.* 2022;492:200-211. [PMID: 36273621](https://pubmed.ncbi.nlm.nih.gov/36273621/).
+    - Publication: [Rochester et al. (2022)](https://pubmed.ncbi.nlm.nih.gov/36273621/)
 - **C. elegans Small RNA-Seq** [[Tutorial 3 *C. elegans*](Small_RNA-Seq_Tutorials/Small_RNA-Seq_C_elegans/Tutorial_3_miRNA_c_elegans.ipynb)] - Study of the microRNAs regulated by the transmembrane transcription factor MYRF-1. In this study, the authors profiled microRNA expression in MYRF-1 mutants compared to wild-type controls.
     - Gene Expression Omnibus: [GSE262766](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE262766)
-    - Publication: Xu Z, Wang Z, Wang L, Qi YB. Essential function of transmembrane transcription factor MYRF in promoting transcription of miRNA *lin-4* during *C. elegans* development. *Elife.* 2024;12:RP89903. [PMID: 38963411](https://pubmed.ncbi.nlm.nih.gov/38963411/); PMCID: PMC11223767.
+    - Publication: [Xu et al. (2024)](https://pubmed.ncbi.nlm.nih.gov/38963411/)
 
 ## Getting Started
 
-These tutorials were designed to be used on the Amazon Web Services (AWS) Cloud computing platform and implemented using Jupyter Notebooks. Since these workflows require several freely accessible software package (e.g., Trimmomatic, STAR, etc) and many R packages, we chose to use a container where all the software is pre-installed. While having all the software pre-installed saves time, it makes the notebooks specific to a Cloud platform. We have included optional code to install all of the software without using the AWS container, but it adds more than 30 minutes of runtime for some of the notebooks.
+These tutorials were designed to be used on the Amazon Web Services (AWS) Cloud computing platform and implemented using Jupyter Notebooks. Since these workflows require several freely accessible software packages (e.g., Trimmomatic, STAR, etc) and many R packages, that take time to install, we suggest running the module from a pre-built container on which all the software is already installed. We provide the container-based option because installing the software adds more than 30 minutes of runtime for some of the notebooks. Setup instructions for each approach are provided below.
 
-The NIGMS Sandbox team has information on AWS and running the notebooks in SageMaker using a container.
+### Creating and Running from SageMaker Studio (Container-based Option)
+<mark>The NIGMS Sandbox team has information on AWS and running the notebooks in SageMaker using a container.</mark>
+Follow the steps shown in the [How To Create Jupyterlab With Custom Image](https://github.com/NIGMS/NIGMS-Sandbox/blob/main/docs/HowToCreateJupyterlabWithCustomImage.md) guidance to setup a domain and run the module using our custom container in JupyterLab.
 
-### Creating a Notebook Instance
+### Creating and Running from a SageMaker Notebook Instance (Non-Container Option)
 
-Follow the steps shown in the [Using SageMaker Documentation](https://github.com/NIGMS/NIGMS-Sandbox/blob/main/docs/HowToCreateAWSSagemakerNotebooks.md) to create a new notebook instance in Amazon SageMaker.
+Follow the steps shown in the [How To Create AWS Sagemaker Notebooks](https://github.com/NIGMS/NIGMS-Sandbox/blob/main/docs/HowToCreateAWSSagemakerNotebooks.md) guidance to create a new notebook instance in Amazon SageMaker.
 
-In step 4, select ml.m5.2xlarge from the dropdown box as the notebook instance type and be especially careful to **enable idle shutdown**.
+In step 4, select `ml.m5.2xlarge` from the dropdown box as the notebook instance type and be especially careful to **enable idle shutdown**. If you plan to run the full alignment tutorial (Tutorial 1B) you may want to upgrade to an `ml.m5.4xlarge` instance type.
 
 In step 7, after creating a notebook instance and being in the JupyterLab screen, you will need to download the module content. The easiest way to do this is to clone the repository using the Git command. This can be done by clicking on the git symbol in your JupyterLab environment and pasting the following URL https://github.com/NIGMS/scRNASeq-miRNASeq-and-TF-Network-Analysis.git. This will download our repo, which includes the tutorial files, into a folder called 'scRNASeq-miRNASeq-and-TF-Network-Analysis'. Double click this folder now. Inside you will find all of the tutorial files for each of the species-specific workflows, which you can double click and run.
 
