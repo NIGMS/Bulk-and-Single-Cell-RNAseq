@@ -28,7 +28,15 @@ The purpose of these tutorials is to help users familiarize themselves with RNA 
 - **scRNA-Seq:** 
     - Analysis of read counts per cell using [R/seurat](https://satijalab.org/seurat) (mouse only).
 
-Here is a link to a [YouTube video](https://youtube.com) that gives you an overview of the tutorials.
+### Module Overview Video
+This video gives an overview of the background of Bulk RNA Sequencing and workflow to be accomplished in accompanying tutorials.
+<p align="center">
+        <a href="https://www.youtube.com/watch?v=_O_NhJ60wcc&list=PLXaEJPtnQ4w7Vu7vqWbttBjUGrPp4Qa7b">
+            <img src="images/maine_overview_video_thumbnail.jpeg" alt="Overview of RNA Sequencing Data to Characerize Gene and MicroRNA Expression", width="550"/>
+        </a>
+    <br>
+    <span> Click above image to watch overview video </span>
+</p>
 
 ## Background
 
@@ -134,9 +142,27 @@ These tutorials were designed to be used on the Amazon Web Services (AWS) Cloud 
 <mark>The NIGMS Sandbox team has information on AWS and running the notebooks in SageMaker using a container.</mark>
 Follow the steps shown in the [How To Create Jupyterlab With Custom Image](https://github.com/NIGMS/NIGMS-Sandbox/blob/main/docs/HowToCreateJupyterlabWithCustomImage.md) guidance to setup a domain and run the module using our custom container in JupyterLab.
 
+You can also watch the container setup video below for step-by-step instructions for creating a domain and running from a container in SageMaker Studio:
+<p align="center">
+        <a href="https://www.youtube.com/watch?v=CHHSO1NS3Xs&list=PLXaEJPtnQ4w7Vu7vqWbttBjUGrPp4Qa7b">
+            <img src="images/aws_container_setup_thumbnail.jpeg" alt="Running an AWS container in AWS SageMaker Studio", width="550"/>
+        </a>
+    <br>
+    <span> Click above image to watch container setup video </span>
+</p>
+
 ### Creating and Running from a SageMaker Notebook Instance (Non-Container Option)
 
 Follow the steps shown in the [How To Create AWS Sagemaker Notebooks](https://github.com/NIGMS/NIGMS-Sandbox/blob/main/docs/HowToCreateAWSSagemakerNotebooks.md) guidance to create a new notebook instance in Amazon SageMaker.
+
+You can also watch the notebook setup video below for step-by-step instructions:
+<p align="center">
+        <a href="https://www.youtube.com/watch?v=djLo0L3147s&list=PLXaEJPtnQ4w7Vu7vqWbttBjUGrPp4Qa7b">
+            <img src="images/aws_notebook_setup_thumbnail.jpeg" alt="Creating an AWS SageMaker Notebook Instance", width="550"/>
+        </a>
+    <br>
+    <span> Click above image to watch notebook setup video </span>
+</p>
 
 In step 4, select `ml.m5.2xlarge` from the dropdown box as the notebook instance type and be especially careful to **enable idle shutdown**. If you plan to run the full alignment tutorial (Tutorial 1B) you may want to upgrade to an `ml.m5.4xlarge` instance type.
 
