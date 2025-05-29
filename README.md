@@ -1,5 +1,9 @@
 [comment]: <> (Hi. If you are seeing this message, please open this file with markdown preview or jupyter notebook. You can do this by right clicking on the readme file and picking 'open with'.)
-![course-card](images/module_anchor_image.png)
+
+<p align="center">
+    <img src="images/module_anchor_image.png" width="400" />
+</p>
+
 # University of Maine Gene and microRNA Expression Using RNA-Seq and Network Analysis
 
 
