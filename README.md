@@ -1,5 +1,9 @@
 [comment]: <> (Hi. If you are seeing this message, please open this file with markdown preview or jupyter notebook. You can do this by right clicking on the readme file and picking 'open with'.)
-![course-card](images/module_anchor_image.png)
+
+<p align="center">
+    <img src="images/module_anchor_image.png" width="400" />
+</p>
+
 # University of Maine Gene and microRNA Expression Using RNA-Seq and Network Analysis
 
 
@@ -138,11 +142,10 @@ These tutorials use example sequence data from the Sequence Read Archive.
 
 These tutorials were designed to be used on the Amazon Web Services (AWS) Cloud computing platform and implemented using Jupyter Notebooks. Since these workflows require several freely accessible software packages (e.g., Trimmomatic, STAR, etc) and many R packages, that take time to install, we suggest running the module from a pre-built container on which all the software is already installed. We provide the container-based option because installing the software adds more than 30 minutes of runtime for some of the notebooks. Setup instructions for each approach are provided below.
 
-### Creating and Running from SageMaker Studio (Container-based Option)
-<mark>The NIGMS Sandbox team has information on AWS and running the notebooks in SageMaker using a container.</mark>
-Follow the steps shown in the [How To Create Jupyterlab With Custom Image](https://github.com/NIGMS/NIGMS-Sandbox/blob/main/docs/HowToCreateJupyterlabWithCustomImage.md) guidance to setup a domain and run the module using our custom container in JupyterLab.
+### Creating and Running from SageMaker AI Studio (Container-based Option)
+The NIGMS Sandbox repository provideds informational resources for running the module's notebooks in Amazon SageMaker AI Studio using a container. Please follow the documentation [here](https://github.com/NIGMS/NIGMS-Sandbox/blob/Kyle-update-sagemaker/docs/SageMakerNotebook&StudioSetup.md#2-using-sagemaker-ai-studio-instances) to pull our custom public container into your account's Elastic Container Registry (ECR), setup a domain and attach the container image, and then run the module in JupyterLab using the custom container. The URI to be used to pull our custom container is `public.ecr.aws/v8e3m3v4/sagemaker/umaine-sagemaker`.
 
-You can also watch the container setup video below for step-by-step instructions for creating a domain and running from a container in SageMaker Studio:
+You can also watch the container setup video below for step-by-step instructions for creating a domain and running from a container in SageMaker Studio, however, the video does not provide guidance on pulling the container into your AWS account's ECR:
 <p align="center">
         <a href="https://www.youtube.com/watch?v=CHHSO1NS3Xs&list=PLXaEJPtnQ4w7Vu7vqWbttBjUGrPp4Qa7b">
             <img src="images/aws_container_setup_thumbnail.jpeg" alt="Running an AWS container in AWS SageMaker Studio", width="550"/>
@@ -151,9 +154,9 @@ You can also watch the container setup video below for step-by-step instructions
     <span> Click above image to watch container setup video </span>
 </p>
 
-### Creating and Running from a SageMaker Notebook Instance (Non-Container Option)
+### Creating and Running from a SageMaker AI Notebook Instance (Non-Container Option)
 
-Follow the steps shown in the [How To Create AWS Sagemaker Notebooks](https://github.com/NIGMS/NIGMS-Sandbox/blob/main/docs/HowToCreateAWSSagemakerNotebooks.md) guidance to create a new notebook instance in Amazon SageMaker.
+If you do not plan to run the module from our custom container, then you can follow the documentation [here](https://github.com/NIGMS/NIGMS-Sandbox/blob/Kyle-update-sagemaker/docs/SageMakerNotebook&StudioSetup.md#1-using-sagemaker-ai-notebook-instances) to create a new notebook instance in Amazon SageMaker AI. If you elect to run the module using the non-container option, please make sure to follow the package installation instructions closely at the top of each submodule notebook.
 
 You can also watch the notebook setup video below for step-by-step instructions:
 <p align="center">
@@ -166,7 +169,10 @@ You can also watch the notebook setup video below for step-by-step instructions:
 
 In step 4, select `ml.m5.2xlarge` from the dropdown box as the notebook instance type and be especially careful to **enable idle shutdown**. If you plan to run the full alignment tutorial (Tutorial 1B) you may want to upgrade to an `ml.m5.4xlarge` instance type.
 
-In step 7, after creating a notebook instance and being in the JupyterLab screen, you will need to download the module content. The easiest way to do this is to clone the repository using the Git command. This can be done by clicking on the git symbol in your JupyterLab environment and pasting the following URL https://github.com/NIGMS/scRNASeq-miRNASeq-and-TF-Network-Analysis.git. This will download our repo, which includes the tutorial files, into a folder called 'scRNASeq-miRNASeq-and-TF-Network-Analysis'. Double click this folder now. Inside you will find all of the tutorial files for each of the species-specific workflows, which you can double click and run.
+In step 7, after creating a notebook instance and being in the JupyterLab screen, you will need to download the module content. The easiest way to do this is to clone the repository using the Git command. This can be done by: 
+- Clicking on the git symbol in your JupyterLab environment.
+- Pasting the following URL https://github.com/NIGMS/Bulk-and-Single-Cell-RNAseq to download our repo, which includes the tutorial files, into a folder called `Bulk-and-Single-Cell-RNAseq`.
+- Double clicking the `Bulk-and-Single-Cell-RNAseq` folder where you will find all of the tutorial files for each of the species-specific workflows, which you can double click and run.
 
 In step 8, you select a Kernel for the notebook. Please select conda_python3 for this module.
 
