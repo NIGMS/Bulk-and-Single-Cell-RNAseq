@@ -1,11 +1,10 @@
 [comment]: <> (Hi. If you are seeing this message, please open this file with markdown preview or jupyter notebook. You can do this by right clicking on the readme file and picking 'open with'.)
 
+# University of Maine Gene and microRNA Expression Using RNA-Seq and Network Analysis
+
 <p align="center">
     <img src="images/module_anchor_image.png" width="400" />
 </p>
-
-# University of Maine Gene and microRNA Expression Using RNA-Seq and Network Analysis
-
 
 ## Table of Contents
 
@@ -14,7 +13,6 @@
 + [Workflows](#workflows)
 + [Data](#data)
 + [Getting Started](#getting-started)
-+ [Support Forum Thanks](#support-forum-thanks)  
 + [Funding](#funding)  
 
    
